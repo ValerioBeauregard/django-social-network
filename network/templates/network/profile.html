@@ -1,0 +1,16 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block title %}| Profile{% endblock %}
+
+{% block body %}
+    <input type="hidden" id="user_id" value="{{ user_id }}">
+    <input type="hidden" id="current_user_id" value="{{ user.id }}">
+
+    <div id="profile"></div>
+
+    <script type="text/babel" src="{% static 'network/react_profile.js' %}"></script>
+
+{% endblock %}
+

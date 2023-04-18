@@ -1,0 +1,17 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block title %} | All Posts{% endblock %}
+
+{% block body %}
+    <input type="hidden" id="user_id" value="{{ user.id }}">
+
+    {% if user.is_authenticated %}
+    <div id="index"></div>
+    {% endif %}
+
+    <script type="text/babel" src="{% static 'network/react_index.js' %}"></script>
+
+{% endblock %}
+

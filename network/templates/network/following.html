@@ -1,0 +1,15 @@
+{% extends "network/layout.html" %}
+
+{% load static %}
+
+{% block title %}| Following{% endblock %}
+
+{% block body %}
+    <input type="hidden" id="user_id" value="{{ user.id }}">
+
+    <div id="following"></div>
+
+    <script type="text/babel" src="{% static 'network/react_following.js' %}"></script>
+
+{% endblock %}
+
